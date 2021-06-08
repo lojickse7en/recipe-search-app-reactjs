@@ -13,7 +13,9 @@ function App() {
 
   const searchForRecipes = async (query: String): Promise<IRecipe[]> => {
     const result = await fetch(`https://lojickse7en.github.io/recipe-search-app-reactjs/?search=${query}`)
-    return (await result.json()).results;
+    const x = await fetch(`https://lojickse7en.github.io/recipe-search-app-reactjs/?search=${query}`)
+    console.log(await x.text());
+    return (await result.json());
   };
 
   useEffect(() => {
