@@ -13,7 +13,7 @@ function App() {
   
   //calls out to the proxy api created
   const searchForRecipes = async (query: string): Promise<IRecipe[]> => {
-    const result = await fetch(`http://lojickse7en.github.io/recipe-search-app-reactjs/?search=${query}`)
+    const result = await fetch(`https://lojickse7en.github.io/recipe-search-app-reactjs/?search=${query}`)
     return (await result.json()).results;
     };
     

@@ -5,7 +5,7 @@ const RecipeComponent =(props: {recipe: IRecipe}) => {
     return (
         <div className="recipe">
             <div className="title">
-                <img src={recipe.thumbnail || 'http://localhost:3000/placeholder.jpg'} alt={recipe.title} />
+                <img src={recipe.thumbnail || 'https://lojickse7en.github.io/recipe-search-app-reactjs/placeholder.jpg'} alt={recipe.title} />
                 <p>{recipe.title}</p>
             </div>
             {recipe.ingredients && 
