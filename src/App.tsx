@@ -12,9 +12,10 @@ function App() {
   const [recipeSearch, setRecipeSearch] = useState('');
   
   //calls out to the proxy api created
-  const searchForRecipes = async (query: string): Promise<IRecipe[]> => {
+  const searchForRecipes = async (query: String): Promise<IRecipe[]> => {
     const result = await fetch(`http://localhost:3001/?search=${query}`)
-    // console.log(await result.text());
+    // const x = await fetch(`http://localhost:3000/?search=${query}`)
+    // console.log(await x.text());
     return (await result.json()).results;
     };
     
